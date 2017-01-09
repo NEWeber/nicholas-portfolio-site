@@ -1,0 +1,108 @@
+//Fonts
+// TODO: Get new fonts
+$headline-font: 'Sorts Mill Goudy', 'Times New Roman', serif;
+$secondary-font: 'Open Sans', sans-serif;
+
+// TODO: Choose new color scheme
+$first-color: hsl(20, 100%, 50%);
+$second-color: complement($first-color);
+
+
+// Thanks to http://tallys.github.io/color-theory/
+// Check if the color is a cool color
+@function is-cool-color($color) {
+    @return hue($color) < 300 and hue($color) > 120;
+}
+
+// Check if the color is high value or low value
+
+@function is-high-key-value($color) {
+    @return hue($color) > 30 and hue($color) < 140;
+}
+
+@function is-highest-key-value($color) {
+	@return hue($color) > 30 and hue($color) <90;
+}
+
+@function harmonious-mix($mix, $base) {
+    @if (is-cool-color($mix)){
+        @if is-high-key-value($base) {
+            @return mix($mix, $base, 11%);
+        }
+        @else {
+            @return mix($mix, $base, 16%);
+        }
+    }
+    @else {
+        @if is-high-key-value($base) {
+            @return mix($mix, $base, 13%);
+        }
+        @else {
+            @return mix($mix, $base, 23%);
+        }
+    }
+}
+
+@function mix-neutral($color) {
+	@if (is-highest-key-value($color)) {
+		@if is-high-key-value(complement($color)) {
+			@return mix(complement($color), $color, 19%);
+		}
+		@else {
+			@return mix(complement($color), $color, 13%);
+		}
+	}
+	@else if (is-high-key-value($color)) {
+		@if is-high-key-value(complement($color)) {
+			@return mix(complement($color), $color, 31%);
+		}
+		@else {
+			@return mix(complement($color), $color, 23%);
+		}
+	}
+	@else {
+		@if is-highest-key-value(complement($color)) {
+			@return mix(complement($color), $color, 31%);
+		}
+		@if is-high-key-value(complement($color)) {
+			@return mix(complement($color), $color, 26%);
+		}
+		@else {
+			@return mix(complement($color), $color, 23%);
+		}
+	}
+}
+
+$primary-color: harmonious-mix($second-color, $first-color);
+$complementary-color: harmonious-mix($first-color, $second-color);
+
+// Complementary Neutrals, highlight, midtone, shadow
+$complementary-neutral: mix-neutral($complementary-color);
+$complementary-neutral-light: lighten($complementary-neutral, 33);
+$complementary-neutral-dark: darken($complementary-neutral, 33);
+
+// Primary neutrals, highlight, midtone, shadow
+$primary-neutral: mix-neutral($primary-color);
+$primary-neutral-light: lighten($primary-neutral, 33);
+$primary-neutral-dark: darken($primary-neutral, 33);
+
+// Primary tint and shade
+
+$primary-light: mix($primary-neutral-light, $primary-color, 45%);
+$primary-dark: mix($primary-neutral-dark, $primary-color, 45%);
+
+$complementary-light: mix($complementary-neutral-light, $complementary-color, 45%);
+$complementary-dark: mix($complementary-neutral-dark, $complementary-color, 45%);
+
+// Pure neutrals, highlight, midtone, shadow
+
+$white: lighten($primary-neutral-light, 15);
+$neutral-gray: grayscale($primary-neutral);
+$primary-gray: mix($primary-color, $complementary-color, 30);
+$complementary-gray: mix($complementary-color, $primary-color, 63);
+$black: grayscale($complementary-neutral-dark);
+
+// Analogous Colors
+
+$analogous-color: adjust-hue($complementary-color, -40);
+$complementary-analogous: mix($analogous-color, $complementary-color, 66);

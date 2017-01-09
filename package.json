@@ -1,0 +1,37 @@
+{
+  "name": "nicholas-site",
+  "version": "0.0.1",
+  "description": "Nicholas' Site",
+  "main": "js/main.js",
+  "dependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "pump": "^1.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "rsyncwrapper": "^2.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+TODO"
+  },
+  "keywords": [
+    "Nicholas"
+  ],
+  "author": "Nicholas Weber",
+  "license": "ISC",
+  "bugs": {
+    "url": "TODO"
+  },
+  "homepage": "TODO"
+}

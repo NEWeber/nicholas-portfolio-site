@@ -1,0 +1,9 @@
+{% set pageTitle = "Nicholas Edwin Weber" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+    <div class="content-wrapper">
+        <div class="text-container">
+            {# TODO: Copy here #}
+        </div>
+    </div>
+{% endblock %}
