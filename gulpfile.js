@@ -11,7 +11,6 @@ var browserSync    = require( 'browser-sync' );
 var autoprefixer   = require( 'gulp-autoprefixer' );
 var rsync          = require( 'rsyncwrapper' );
 var fs             = require( 'fs' );
-var creds          = JSON.parse( fs.readFileSync( './secrets.json' ) );
 
 function customerPlumber( errTitle ) {
     return plumber( {
@@ -23,7 +22,7 @@ function customerPlumber( errTitle ) {
     } );
 }
 
-//Compile nunjucks files, put in target
+//Compile nunjucks files, put in dev
 gulp.task( 'nunjucks', function( cb ) {
     pump( [
         //TODO: update when staff page is ready
@@ -32,7 +31,7 @@ gulp.task( 'nunjucks', function( cb ) {
         nunjucksRender( {
             path: [ 'templates' ]
         } ),
-        gulp.dest( 'target' ),
+        gulp.dest( 'dev' ),
         browserSync.reload( {
             stream: true
         } )
@@ -41,7 +40,7 @@ gulp.task( 'nunjucks', function( cb ) {
     );
 } );
 
-//Compile sass, put in target/css
+//Compile sass, put in dev/css
 gulp.task( 'sass', function( cb ) {
     pump( [
         //TODO: update when staff page is ready
@@ -49,7 +48,7 @@ gulp.task( 'sass', function( cb ) {
         customerPlumber( 'SASS Error' ),
         sass().on( 'error', sass.logError ),
         autoprefixer(),
-        gulp.dest( './target/css' ),
+        gulp.dest( './dev/css' ),
         browserSync.reload( {
             stream: true
         } )
@@ -63,7 +62,7 @@ gulp.task( 'compress', function ( cb ) {
         gulp.src( './js/*.js' ),
         customerPlumber( 'JS Error' ),
         uglify(),
-        gulp.dest( './target/js' ),
+        gulp.dest( './dev/js' ),
         browserSync.reload( {
             stream: true
         } )
@@ -78,7 +77,7 @@ gulp.task( 'copy', function( cb ) {
         //TODO: update exclusions when placeholder images are needed.
         gulp.src( [ 'img/*' ] ),
         customerPlumber( 'Copy Error' ),
-        gulp.dest( './target/img' ),
+        gulp.dest( './dev/img' ),
         browserSync.reload( {
             stream: true
         } )
@@ -92,7 +91,7 @@ gulp.task( 'default', [ 'nunjucks', 'sass', 'compress', 'copy' ] );
 gulp.task( 'browserSync', function() {
     browserSync( {
         server: {
-            baseDir: 'target'
+            baseDir: 'dev'
         }
     } );
 } );
@@ -101,20 +100,4 @@ gulp.task( 'watch', [ 'default', 'browserSync' ], function() {
     gulp.watch( './sass/**/*.scss', [ 'sass' ] );
     gulp.watch( './js/*.js', [ 'compress' ] );
     gulp.watch( ['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], [ 'nunjucks' ] );
-} );
-
-gulp.task( 'deploy', [ 'default' ], function() {
-    rsync( {
-        src: 'target/',
-        dest: creds.username,
-        privateKey: creds.keyPath,
-        ssh: true,
-        recursive: true,
-    }, function ( error, stdout, stderr, cmd ) {
-        if ( error ) {
-            console.log( error.message );
-        } else {
-            console.log( 'Uploaded to site successfully' );
-        }
-    } );
 } );
