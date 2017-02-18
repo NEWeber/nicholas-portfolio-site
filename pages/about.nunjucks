@@ -1,0 +1,14 @@
+{% set pageTitle = "About Nicholas Edwin Weber" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <img class="headshot" src="/img/LinkedInGreen.jpg" />
+        <div class="text-container">
+            <p>I'm a web developer with a concentration on front end development. I work as a developer for REI (Recreational Equipment Inc.)</p>
+            <p>If you'd like to check out some of my other work, check out my <a href="https://github.com/NEWeber/">GitHub profile</a>. I tweet <a href="https://twitter.com/nwebermath">@nwebermath</a>.</p>
+            <p>Take a look at my <a href="./portfolio.html">portfolio</a> and <a href="./contact.html">contact me</a>.</p>
+        </div>
+    </div>
+
+{% endblock %}
