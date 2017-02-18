@@ -1,3 +1,124 @@
 @import "variables";
 
-// Styles here
+body {
+    background-color: $primary-neutral-light;
+    color: $black;
+}
+
+.headshot {
+    max-width: 200px;
+    border: 10px solid $white;
+    border-radius: 5px;
+    float: left;
+    margin-right: 20px;
+}
+
+.center-content {
+    display:block;
+    margin:auto;
+    max-width: 1000px;
+    padding: 25px;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: auto;
+    display: block;
+
+    label {
+        display: inline-block;
+        padding-top: 5px;
+    }
+
+    input {
+        width: 100%;
+        height: 25px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: inset 0 1px 3px #ddd;
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: inset 0 1px 3px #ddd;
+        padding-left: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+.color-swatch {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+.color-1 {
+    background-color: $primary-neutral-light;
+}
+
+.color-2 {
+    background-color: $primary-neutral;
+}
+
+.color-3 {
+    background-color: $primary-neutral-dark;
+}
+.color-4 {
+    background-color: $primary-light;
+}
+.color-5 {
+    background-color: $primary-color;
+}
+.color-6 {
+    background-color: $primary-dark;
+}
+
+.color-7 {
+    background-color: $complementary-neutral-light;
+}
+
+.color-8 {
+    background-color: $complementary-neutral;
+}
+
+.color-9 {
+    background-color: $complementary-neutral-dark;
+}
+.color-10 {
+    background-color: $complementary-light;
+}
+.color-11 {
+    background-color: $complementary-color;
+}
+.color-12 {
+    background-color: $complementary-dark;
+}
+.color-13 {
+    background-color: $white;
+}
+
+.color-14 {
+    background-color: $neutral-gray;
+}
+
+.color-15 {
+    background-color: $primary-gray;
+}
+.color-16 {
+    background-color: $complementary-gray;
+}
+
+.color-17 {
+    background-color: $black;
+}
+.color-18 {
+    background-color: $analogous-color;
+}
+
+.color-19 {
+    background-color: $complementary-analogous;
+}

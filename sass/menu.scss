@@ -1,0 +1,155 @@
+@import "variables";
+
+.menu {
+    //TODO: Implement Some sort of max-width for menu
+    max-width: 1150px;
+    // width: 100%;
+}
+
+.topnav {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    background-color: $complementary-neutral-dark;
+    margin-bottom: 20px;
+    text-align: center;
+
+    li {
+        @media screen and (min-width:$menu-breakpoint-above) {
+            display: inline-block;
+        }
+        @media screen and (max-width:$menu-breakpoint-below) {
+            float: left;
+        }
+        font-family: $headline-font;
+        font-size: 19px;
+
+        a {
+            display: inline-block;
+            color: $primary-neutral-light;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 19px;
+        }
+    }
+.icon {
+    display: none;
+}
+
+ul .service-times {
+    text-decoration:none;
+    color: $white;
+    padding:10px 40px;
+    display:inline-block;
+    font-size: 100%;
+}
+
+.menu a {
+    padding: 10px 30px;
+    display: inline-block;
+    text-shadow: 0 1px 0 rgba($black, 0.4);
+    font-size: 19px;
+}
+
+.menu > ul > li {
+    float: left;
+    display: inline-block;
+    position: relative;
+    font-size: 19px;
+}
+
+.sub-menu {
+    padding: 5px 0;
+    position: absolute;
+    z-index:-1;
+    opacity: 0;
+    transition: opacity linear 0.15s;
+    background: $complementary-neutral-dark;
+    display: none;
+    @media screen and (min-width:$menu-breakpoint-above) {
+        box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+    }
+    @media screen and (max-width:$menu-breakpoint-below) {
+        width: 100%;
+    }
+}
+
+.service-times p {
+    padding: 0 15px
+}
+
+li:hover .sub-menu,
+#display > .sub-menu {
+    z-index: 1;
+    opacity: 1;
+    display: table;
+    @media screen and (max-width:$menu-breakpoint-below) {
+        position: inherit;
+    }
+}
+
+.sub-menu li {
+    display: block;
+    font-size: 16px;
+}
+
+.sub-menu li a {
+    padding: 10px 30px;
+    display: block;
+}
+
+.service-times {
+    text-align: left;
+    text-decoration:none;
+    color: $white;
+    padding:10px 40px;
+    display:inline-block;
+    font-size: 100%;
+}
+
+    .more > a::after {
+        @media screen and (min-width:$menu-breakpoint-above) {
+            position: relative;
+            left: 6px;
+            color: $primary-neutral-light;
+            content: "\25BC";
+            font-size: 12px;
+            line-height: 0%;
+        }
+
+        @media screen and (max-width:$menu-breakpoint-below) {
+            float: right;
+            content: '+';
+        }
+    }
+}
+
+// When the screen is less than 850 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon)
+@media screen and (max-width:$menu-breakpoint-below) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+// The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens
+@media screen and (max-width:$menu-breakpoint-below) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}

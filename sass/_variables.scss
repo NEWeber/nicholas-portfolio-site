@@ -1,10 +1,14 @@
+//breakpoints
+$menu-breakpoint-above: 750px;
+$menu-breakpoint-below: 749px;
+
 //Fonts
 // TODO: Get new fonts
 $headline-font: 'Sorts Mill Goudy', 'Times New Roman', serif;
 $secondary-font: 'Open Sans', sans-serif;
 
 // TODO: Choose new color scheme
-$first-color: hsl(20, 100%, 50%);
+$first-color: hsl(182, 67%, 23%);
 $second-color: complement($first-color);
 
 
