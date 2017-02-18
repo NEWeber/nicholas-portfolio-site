@@ -1,0 +1,24 @@
+{% set pageTitle = "Nicholas Edwin Weber" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+
+    <div class="color-swatch color-1"></div>
+    <div class="color-swatch color-2"></div>
+    <div class="color-swatch color-3"></div>
+    <div class="color-swatch color-4"></div>
+    <div class="color-swatch color-5"></div>
+    <div class="color-swatch color-6"></div>
+    <div class="color-swatch color-7"></div>
+    <div class="color-swatch color-8"></div>
+    <div class="color-swatch color-9"></div>
+    <div class="color-swatch color-10"></div>
+    <div class="color-swatch color-11"></div>
+    <div class="color-swatch color-12"></div>
+    <div class="color-swatch color-13"></div>
+    <div class="color-swatch color-14"></div>
+    <div class="color-swatch color-15"></div>
+    <div class="color-swatch color-16"></div>
+    <div class="color-swatch color-17"></div>
+    <div class="color-swatch color-18"></div>
+    <div class="color-swatch color-19"></div>
+{% endblock %}
