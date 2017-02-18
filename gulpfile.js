@@ -25,7 +25,6 @@ function customerPlumber( errTitle ) {
 //Compile nunjucks files, put in dev
 gulp.task( 'nunjucks', function( cb ) {
     pump( [
-        //TODO: update when staff page is ready
         gulp.src( [ 'pages/**/*.nunjucks' ] ),
         customerPlumber( 'Nunjucks Error' ),
         nunjucksRender( {
@@ -43,7 +42,6 @@ gulp.task( 'nunjucks', function( cb ) {
 //Compile sass, put in dev/css
 gulp.task( 'sass', function( cb ) {
     pump( [
-        //TODO: update when staff page is ready
         gulp.src( [ 'sass/**/*.scss' ] ),
         customerPlumber( 'SASS Error' ),
         sass().on( 'error', sass.logError ),
@@ -74,7 +72,6 @@ gulp.task( 'compress', function ( cb ) {
 // checkout https://github.com/sindresorhus/gulp-imagemin for images
 gulp.task( 'copy', function( cb ) {
     pump  ( [
-        //TODO: update exclusions when placeholder images are needed.
         gulp.src( [ 'img/*' ] ),
         customerPlumber( 'Copy Error' ),
         gulp.dest( './dev/img' ),
