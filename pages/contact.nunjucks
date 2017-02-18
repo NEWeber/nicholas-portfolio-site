@@ -1,0 +1,26 @@
+{% set pageTitle = "Contact Nicholas Edwin Weber" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <div class="text-container">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="//flipmail.co/api/sW2SZGigGFngpL8dQLWZ" method="post">
+                <label for="name">Your Name</label>
+                <input id="name" type="text" name="name">
+                <input type="hidden" name="_valid[name]" value="required">
+                <label for="email">Your Email</label>
+                <input id="email" type="email" name="email">
+                <input type="hidden" name="_replyto" value="%email">
+                <input type="hidden" name="_valid[email]" value="required|valid_email">
+                <input type="hidden" name="_subject" value="Website Contact">
+                <label for="email-message">Your Message</label>
+                <textarea id="email-message" name="message" value="required"></textarea>
+                <input type="hidden" name="_valid[message]" value="required">
+                <input type="text" name="_honey" value="" style="display:none">
+                {#TODO <input type="hidden" name="_after" value="http://zion-tacoma.org/contact-thanks.html" /> #}
+                <button class= "btn btn-container btn-primary" type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
