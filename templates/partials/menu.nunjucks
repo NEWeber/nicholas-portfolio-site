@@ -1,0 +1,17 @@
+<nav class="menu">
+    <ul id="my-top-nav" class="topnav">
+        <li><a href="./index.html">Home</a></li>
+        <li>
+            <a href="#">Portfolio</a>
+        </li>
+        <li>
+            <a href="#">Blog</a>
+        </li>
+        <li>
+            <a href="./contact.html">Contact</a>
+        </li>
+        <li class="icon">
+            <a href="javascript:void(0);" onclick="menuToggle()">&#8801;</a>
+        </li>
+    </ul>
+</nav>

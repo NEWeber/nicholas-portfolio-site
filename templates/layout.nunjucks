@@ -6,13 +6,15 @@
         {# TODO: Link to used fonts #}
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Sorts+Mill+Goudy" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <link rel="stylesheet" type="text/css" href="./css/menu.css">
         {# TODO: Set up Google analytics #}
         <script src="./js/google-analytics.js"></script>
         <meta name="viewport" content="width=device-width" />
     </head>
     <body>
-        {% block content %} {% endblock %}
-
+        <div class="center-content">
+            {% block content %} {% endblock %}
+        </div>
         <script src="./js/main.js"></script>
     </body>
 </html>

@@ -1,9 +1,13 @@
 {% set pageTitle = "Nicholas Edwin Weber" %}
 {% extends "layout.nunjucks" %}
 {% block content %}
+    {% include "partials/menu.nunjucks" %}
     <div class="content-wrapper">
+        <img class="headshot" src="/img/LinkedInGreen.jpg" />
         <div class="text-container">
-            {# TODO: Copy here #}
+            <p>I'm Nicholas Weber, a web developer. I'm always looking to improve my skills and lean more.</p>
+            <p>Take a look at my <a href="./portfolio.html">portfolio</a> and <a href="./contact.html">contact me</a>.</p>
         </div>
     </div>
+
 {% endblock %}
