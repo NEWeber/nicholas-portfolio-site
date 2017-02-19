@@ -10,6 +10,7 @@ var plumber        = require( 'gulp-plumber' );
 var browserSync    = require( 'browser-sync' );
 var autoprefixer   = require( 'gulp-autoprefixer' );
 var rsync          = require( 'rsyncwrapper' );
+var data           = require( 'gulp-data' );
 var fs             = require( 'fs' );
 
 function customerPlumber( errTitle ) {
@@ -27,6 +28,9 @@ gulp.task( 'nunjucks', function( cb ) {
     pump( [
         gulp.src( [ 'pages/**/*.nunjucks' ] ),
         customerPlumber( 'Nunjucks Error' ),
+        data( function () {
+            return JSON.parse( fs.readFileSync( './portfolio.json' ) )
+        } ),
         nunjucksRender( {
             path: [ 'templates' ]
         } ),
@@ -96,5 +100,9 @@ gulp.task( 'browserSync', function() {
 gulp.task( 'watch', [ 'default', 'browserSync' ], function() {
     gulp.watch( './sass/**/*.scss', [ 'sass' ] );
     gulp.watch( './js/*.js', [ 'compress' ] );
-    gulp.watch( ['pages/**/*.nunjucks', 'templates/**/*.nunjucks'], [ 'nunjucks' ] );
+    gulp.watch( [
+        'pages/**/*.nunjucks',
+        'templates/**/*.nunjucks',
+        './portfolio.json'
+    ], [ 'nunjucks' ] );
 } );
