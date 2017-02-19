@@ -1,0 +1,32 @@
+{% set pageTitle = "Nicholas Edwin Weber Portfolio" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <h1>Nicholas' Projects</h1>
+        <p>Check out my previous projects below. Click on the project tile more more details or <a href="./contact.html">contact me</a></p>
+        <div class="projects">
+            {% for project in projects %}
+            <a href="{{ project.link }}">
+                <div class="project-container">
+                    <h2>{{ project.title }}</h2>
+                    <div class="project-image-container">
+                        <img class="project-image" src="{{ project.src }}" alt="{{ project.alt }}" />
+                        {# TODO: on hover, display the mobile version of the project/site #}
+                        <div class="skill-container">
+                            {% for skill in project.skills %}
+                                <div class="skill">
+                                    {{ skill }}
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        {{ project.description }}
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

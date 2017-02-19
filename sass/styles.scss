@@ -50,6 +50,49 @@ body {
         margin-bottom: 5px;
     }
 }
+.projects {
+    text-decoration: none;
+}
+
+.project-container {
+    color: $black;
+    display: inline-block;
+    margin: 20px 20px 20px 0;
+    max-width: 375px;
+    border: black solid 1px;
+    border-radius: 5px;
+    max-height: 470px;
+    padding: 0 10px 10px 10px;
+    background-color: $complementary-neutral-light;
+}
+
+.project-image-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.project-image {
+    width: auto;
+    height: 310px;
+}
+
+.skill-container {
+    max-width: 295px;
+    position: absolute;
+    left: 15px;
+    top: 240px;
+}
+
+.skill {
+    margin: 2px 0;
+    background-color: $black;
+    padding: 5px 10px;
+    position: relative;
+    display: inline-block;
+    color: $white;
+    border-radius: 5px;
+}
 
 .color-swatch {
     display: inline-block;
