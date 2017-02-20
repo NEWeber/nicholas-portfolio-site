@@ -94,6 +94,26 @@ body {
     border-radius: 5px;
 }
 
+.rei-wl-image-container {
+    display: inline-block;
+    margin-right: 20px;
+    p {
+        clear: both;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+.before-image {
+    width:470px;
+    height:auto;
+}
+
+.after-image {
+    width:470px;
+    height:auto;
+}
+
 .color-swatch {
     display: inline-block;
     height: 50px;

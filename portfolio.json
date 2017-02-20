@@ -4,7 +4,8 @@
             "src": "./img/rei-wish-list.png",
             "alt": "New REI.com Wish List View",
             "skills": [ "Responsive Design", "jQuery", "AJAX", "JSP", "LESS" ],
-            "description" : "Reworked REI.com's wish list view page to be responsive and implemented the updated design."
+            "description" : "Reworked REI.com's wish list view page to be responsive and implemented the updated design.",
+            "link": "./rei-wish-list.html"
         },
         {
             "title": "Zion Lutheran Church",

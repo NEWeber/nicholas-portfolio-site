@@ -1,0 +1,34 @@
+{% set pageTitle = "REI Wish List Update" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <h1>Wish List View Redesign</h1>
+        <div class="rei-wl-image-container">
+            <img class="before-image" src="./img/wish-list-before.png" />
+            <p>Before</p>
+        </div>
+        <div class="rei-wl-image-container">
+            <img class="after-image" src="./img/rei-wish-list.png" />
+            <p>After</p>
+        </div>
+        <div class="text-container">
+            <p>After REI.com's site redesign, our wish list page was still in the old style. In this project, I develeloped the front end for our wish list view.</p>
+            <p>I took the design specifications and created a responsive experience for our customers.</p>
+            <p>If you'd like to check out the wish list view for yourself, go to <a href="https://www.rei.com/lists">REI.com</a> and create a list</p>
+            <p>I some of the skills I used for the project were:
+                {# TODO: figure out a way to pull this list from the JSON rather than manually typing it. #}
+                <ul>
+                    <li>Responsive development</li>
+                    <li>jQuery</li>
+                    <li>AJAX</li>
+                    <li>JSP</li>
+                    <li>LESS</li>
+                    <li>Agile Development</li>
+                    <li>User experience testing</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+{% endblock %}
