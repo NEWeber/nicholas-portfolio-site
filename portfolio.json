@@ -12,7 +12,8 @@
             "src": "img/zion-site.png",
             "alt": "Zion Lutheran Church Homepage",
             "skills": [ "Responsive Design", "Nunjucks", "Gulp", "SASS"],
-            "description": "Designed and coded a new responsive site for Zion Lutheran Church in Tacoma."
+            "description": "Designed and coded a new responsive site for Zion Lutheran Church in Tacoma.",
+            "link": "./zion-tacoma.html"
         }
 
     ]

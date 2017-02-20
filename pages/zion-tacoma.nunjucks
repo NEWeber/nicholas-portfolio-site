@@ -1,0 +1,25 @@
+{% set pageTitle = "Zion Lutheran Tacoma Website" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <h1>Zion Lutheran Church Tacoma</h1>
+        <img class="after-image" src="./img/zion-site.png" />
+        <div class="text-container">
+            <p>I created a web site from scratch for Zion Evangelical Lutheran Church in Tacoma, Washington. After building a desktop site, I made the site responsive for mobile users.</p>
+            <p><a href="http://www.zion-tacoma.org/">View the production version of the site</a>. View the source code <a href="https://github.com/NEWeber/zion-site">here</a>.</p>
+            <p>I some of the skills I used for this site were:
+                {# TODO: figure out a way to pull this list from the JSON rather than manually typing it. #}
+                <ul>
+                    <li>Responsive design and development</li>
+                    <li>Iterative development
+                    <li>Nunjucks</li>
+                    <li>Gulp</li>
+                    <li>SASS</li>
+                    <li>Project planning</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+{% endblock %}
