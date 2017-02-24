@@ -56,7 +56,9 @@ body {
     }
 }
 .projects {
-    text-decoration: none;
+    a {
+        text-decoration: none;
+    }
 }
 
 .project-container {
