@@ -5,6 +5,11 @@ body {
     color: $black;
 }
 
+.homepage-content-wrapper {
+    max-width: 700px;
+    margin: auto;
+}
+
 .headshot {
     max-width: 200px;
     border: 10px solid $white;
