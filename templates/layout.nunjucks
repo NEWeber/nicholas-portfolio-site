@@ -4,7 +4,7 @@
         <title>{{ pageTitle }}</title>
         <meta charset="utf-8" />
         {# TODO: Link to used fonts #}
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Sorts+Mill+Goudy" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Roboto" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./css/styles.css">
         <link rel="stylesheet" type="text/css" href="./css/menu.css">
         {# TODO: Set up Google analytics #}

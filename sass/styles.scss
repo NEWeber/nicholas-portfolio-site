@@ -3,6 +3,11 @@
 body {
     background-color: $primary-neutral-light;
     color: $black;
+    font-family: $secondary-font;
+}
+
+h1, h2, h3, h4 {
+    font-family: $headline-font;
 }
 
 .homepage-content-wrapper {
