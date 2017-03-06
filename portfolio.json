@@ -4,7 +4,7 @@
             "src": "./img/rei-wish-list.png",
             "alt": "New REI.com Wish List View",
             "skills": [ "Responsive Design", "jQuery", "AJAX", "JSP", "LESS" ],
-            "description" : "Reworked REI.com's wish list view page to be responsive and implemented the updated design.",
+            "description" : "Reworked REI.com's wish list view page to be responsive and implemented an updated design.",
             "link": "./rei-wish-list.html"
         },
         {
@@ -12,7 +12,7 @@
             "src": "img/zion-site.png",
             "alt": "Zion Lutheran Church Homepage",
             "skills": [ "Responsive Design", "Nunjucks", "Gulp", "SASS"],
-            "description": "Designed and coded a new responsive site for Zion Lutheran Church in Tacoma.",
+            "description": "Designed and coded a new responsive site for Zion Lutheran Church in Tacoma, Washington.",
             "link": "./zion-tacoma.html"
         }
 

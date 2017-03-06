@@ -16,7 +16,7 @@
             <p>After REI.com's site redesign, our wish list page was still in the old style. In this project, I develeloped the front end for our wish list view.</p>
             <p>I took the design specifications and created a responsive experience for our customers.</p>
             <p>If you'd like to check out the wish list view for yourself, go to <a href="https://www.rei.com/lists">REI.com</a> and create a list</p>
-            <p>I some of the skills I used for the project were:
+            <p>Some of the skills I used for the project were:
                 {# TODO: figure out a way to pull this list from the JSON rather than manually typing it. #}
                 <ul>
                     <li>Responsive development</li>

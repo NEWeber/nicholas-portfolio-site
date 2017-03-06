@@ -67,27 +67,44 @@ h1, h2, h3, h4 {
 }
 
 .project-container {
-    color: $black;
+    color: $white;
     display: inline-block;
     margin: 20px 20px 20px 0;
     max-width: 375px;
-    border: black solid 1px;
+    border: $black solid 1px;
     border-radius: 5px;
     max-height: 470px;
     padding: 0 10px 10px 10px;
-    background-color: $complementary-neutral-light;
+    background-color: $primary-color;
+    h2 {
+        color: rgba( $white, 0.8 );
+    }
 }
+
 
 .project-image-container {
     position: relative;
     width: 100%;
     margin-bottom: 10px;
+    opacity: .8;
 }
 
 .project-image {
     border: $white solid 2px;
     width: auto;
     height: 310px;
+}
+
+.project-container:hover {
+    border: $white solid 1px;
+    .project-image-container {
+        opacity: 1;
+        transition: opacity .5s ease-in-out;
+    }
+    h2 {
+        color: rgba( $white, 1 );
+        transition: opacity .5s ease-in-out;
+    }
 }
 
 .skill-container {
