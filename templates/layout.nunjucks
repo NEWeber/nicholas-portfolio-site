@@ -3,11 +3,9 @@
     <head>
         <title>{{ pageTitle }}</title>
         <meta charset="utf-8" />
-        {# TODO: Link to used fonts #}
         <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Roboto" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./css/styles.css">
         <link rel="stylesheet" type="text/css" href="./css/menu.css">
-        {# TODO: Set up Google analytics #}
         <script src="./js/google-analytics.js"></script>
         <meta name="viewport" content="width=device-width" />
     </head>
