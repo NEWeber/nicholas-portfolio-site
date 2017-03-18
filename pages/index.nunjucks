@@ -8,6 +8,18 @@
             <h1>Nicholas Edwin Weber</h1>
             <p>I'm Nicholas Weber, a web developer. I'm always looking to improve my skills and lean more.</p>
             <p>Take a look at my <a href="./portfolio-hub.html">portfolio</a> and <a href="./contact.html">contact me</a>.</p>
+            <div class="social-icon-container">
+                <a href="https://github.com/NEWeber">
+                    <img src="/img/github.svg" />
+                </a>
+                <a href="https://www.linkedin.com/in/webermath/">
+                    <img src="/img/linked_in.svg" />
+                </a>
+                <a href="https://twitter.com/nwebermath">
+                    <img src="/img/twitter.svg" />
+                </a>
+
+            </div>
         </div>
     </div>
 
