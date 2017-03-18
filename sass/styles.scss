@@ -13,6 +13,10 @@ h1, h2, h3, h4 {
 .homepage-content-wrapper {
     max-width: 700px;
     margin: auto;
+    .text-container {
+        max-width: 400px;
+        float: left;
+    }
 }
 
 .headshot {
@@ -28,6 +32,18 @@ h1, h2, h3, h4 {
     margin:auto;
     max-width: 1000px;
     padding: 25px;
+}
+.social-icon-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+    a {
+        text-decoration: none;
+        margin: 10px;
+    }
+    a:hover{
+        opacity: .6;
+    }
 }
 
 .contact-form {
