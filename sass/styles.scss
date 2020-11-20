@@ -76,7 +76,26 @@ h1, h2, h3, h4 {
         margin-bottom: 5px;
     }
 }
+.contact-btn {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 150px;
+    min-height: 45px;
+    background: $primary-dark;
+    line-height: 55px;
+    border: 1px solid #74838b;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    color: #1f3038;
+    font-size: 1.5em;
+    margin-top: 8px;
+    padding: 0;
+    color: $primary-neutral-light;
+}
 .projects {
+    display: flex;
+    flex-wrap: wrap;
     a {
         text-decoration: none;
     }
@@ -89,7 +108,7 @@ h1, h2, h3, h4 {
     max-width: 375px;
     border: $black solid 1px;
     border-radius: 5px;
-    max-height: 470px;
+    height: 470px;
     padding: 0 10px 10px 10px;
     background-color: $primary-color;
     h2 {
@@ -107,7 +126,7 @@ h1, h2, h3, h4 {
 
 .project-image {
     border: $white solid 2px;
-    width: auto;
+    max-width: 360px;
     height: 310px;
 }
 

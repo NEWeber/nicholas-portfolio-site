@@ -1,0 +1,33 @@
+{% set pageTitle = "REI Restock Assistant" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <h1>Restock Assistant Web App</h1>
+        <div class="rei-wl-image-container">
+            <img class="before-image" src="./img/restock-mobile.png" />
+            <p>Mobile</p>
+        </div>
+        <div class="rei-wl-image-container">
+            <img class="after-image" src="./img/restock-desktop.png" />
+            <p>Desktop</p>
+        </div>
+        <div class="text-container">
+            <p>During REI's Innovation Days (hack days) retail came to the developer group with a problem. Store employees would restock based on a paper print out every morning. This led to problems with not knowing what was out of  stock and losing sales.</p>
+            <p>I joined the team to solve the issue and took the front end lead on the project.  We considered the time and budget constraints. The best way forward was to use the  sales data and inventory to tell what needed restocked.</p>
+            <p>I built the front end of the project in Vue to be able to iterate using an existing CSS framework.  Retail funded the project to build and test in stores.<p>
+            <p>We tested in four stores. I responded to  retail feedback to make a better experience for employees. The pilot was so successful that it went into more stores and then to all our stores.</p>
+            <p>Some of the skills I used for the project were:
+                {# TODO: figure out a way to pull this list from the JSON rather than manually typing it. #}
+                <ul>
+                    <li>Vue</li>
+                    <li>Rapid prototyping</li>
+                    <li>Front End Lead</li>
+                    <li>Responsive Design</li>
+                    <li>SCSS</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+{% endblock %}

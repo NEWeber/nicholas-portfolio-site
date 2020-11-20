@@ -1,0 +1,37 @@
+{% set pageTitle = "REI Reviews Update" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <h1>Reviews App</h1>
+        <div class="rei-wl-image-container">
+            <img class="before-image" src="./img/review-mobile.png" />
+            <p>Mobile</p>
+        </div>
+        <div class="rei-wl-image-container">
+            <img class="after-image" src="./img/review-desktop.png" />
+            <p>Desktop</p>
+        </div>
+        <div class="text-container">
+            <p>REI wanted a native review experience on REI.com to ensure a REI experience.</p>
+
+            <p>I took the front end lead on the project and built a Vue app to specifications.</p>
+
+            <p>The component is responsive: it works on mobile devices. I built robust unit tests to ensure quality and worry-free refactoring.</p>
+
+            <p>We haven't launched it yet, you'll still see the old experience on REI.com right now.</p>
+            <p>Some of the skills I used for the project were:
+                {# TODO: figure out a way to pull this list from the JSON rather than manually typing it. #}
+                <ul>
+                    <li>Vue</li>
+                    <li>Unit Testing</li>
+                    <li>Front End Lead</li>
+                    <li>Responsive Design</li>
+                    <li>SCSS</li>
+                    <li>CSS Animation</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+{% endblock %}
