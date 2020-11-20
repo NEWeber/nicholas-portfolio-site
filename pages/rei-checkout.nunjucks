@@ -1,0 +1,27 @@
+{% set pageTitle = "REI Checkout Update" %}
+{% extends "layout.nunjucks" %}
+{% block content %}
+    {% include "partials/menu.nunjucks" %}
+    <div class="content-wrapper">
+        <h1>REI Checkout Redesign</h1>
+        <div class="rei-wl-image-container">
+            <img class="before-image" src="./img/rei-checkout.png" />
+            <p>Desktop</p>
+        </div>
+        <div class="text-container">
+            <p>I worked on the redesign of REI's checkout process.</p>
+            <p>The project used Riot JS. This allowed us to build reusable templates and tags. We could then reuse them across the site’s new checkout system. This made development faster.</p>
+            <p>We wanted it to be easy to understand what was going on. We used microinteractions on the page to provide feedback to customers about checkout. This led to fewer customer support contacts.</p>
+            <p>Some of the skills I used for the project were:
+                {# TODO: figure out a way to pull this list from the JSON rather than manually typing it. #}
+                <ul>
+                    <li>Riot JS</li>
+                    <li>Microinteractions</li>
+                    <li>Responsive Design</li>
+                    <li>LESS</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+{% endblock %}

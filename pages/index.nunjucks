@@ -7,6 +7,7 @@
         <div class="text-container">
             <h1>Nicholas Edwin Weber</h1>
             <p>I'm Nicholas Weber, a Front End Engineer developing engaging, next-generation web applications with JavaScript, HTML and CSS.</p>
+            <p>I specialize in rapidly prototyping web applications in Vue for fast feedback on your next great idea.</p>
             <p>Take a look at my <a href="./portfolio-hub.html">portfolio</a> and <a href="./contact.html">contact me</a>.</p>
             <div class="social-icon-container">
                 <a href="https://github.com/NEWeber">
@@ -14,9 +15,6 @@
                 </a>
                 <a href="https://www.linkedin.com/in/webermath/">
                     <img src="/img/linked_in.svg" />
-                </a>
-                <a href="https://twitter.com/nwebermath">
-                    <img src="/img/twitter.svg" />
                 </a>
             </div>
         </div>

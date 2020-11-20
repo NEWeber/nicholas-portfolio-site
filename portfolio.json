@@ -1,5 +1,30 @@
 {
-    "projects": [ {
+    "projects": [ 
+        {
+            "title": "REI Reviews",
+            "src": "img/review-mobile.png",
+            "alt": "REI Reviews mobile view",
+            "skills": [ "Vue", "Unit Testing", "Front End Lead", "CSS Animation", "Responsive Design" ],
+            "description": "Worked as front end lead bringing a native REI experience to reviews.",
+            "link": "./rei-reviews.html"
+        },
+        {
+            "title": "Restock Assistant",
+            "src": "img/restock-mobile.png",
+            "alt": "Restock assitant mobile view",
+            "skills": [ "Vue", "Rapid Prototyping", "Front End Lead", "Responsive Design" ],
+            "description": "Designed and built a prototype to be used in our stores to aid the restocking process.",
+            "link": "./rei-restock.html"
+        },
+        {
+            "title": "REI Checkout",
+            "src": "img/rei-checkout.png",
+            "alt": "REI Checkout mobile view",
+            "skills": [ "Riot JS", "Microinteractions", "Responsive Design", "LESS" ],
+            "description": "Worked on a redesign of REI's checkout",
+            "link": "./rei-checkout.html"
+        },
+        {
             "title": "REI.com Wish List Redesign",
             "src": "./img/rei-wish-list.png",
             "alt": "New REI.com Wish List View",
@@ -15,6 +40,5 @@
             "description": "Designed and coded a new responsive site for Zion Lutheran Church in Tacoma, Washington.",
             "link": "./zion-tacoma.html"
         }
-
     ]
 }
